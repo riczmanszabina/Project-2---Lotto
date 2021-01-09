@@ -35,12 +35,13 @@ function readFile() {
         success: function (response) {
             tempArray = response.split("\r\n")
             for (i = 0; i < tempArray.length; i++) {
-                lottoStatics.push(tempArray[i].split(";"))
+                if (tempArray[i]) {
+                    lottoStatics.push(tempArray[i].split(";"))
+                }
             }
-
-            console.log(lottoStatics[20][12])
+            console.log(lottoStatics[1][1])
         },
     });
 }
 
-export {readFile, lottoStatics};
+readFile();
