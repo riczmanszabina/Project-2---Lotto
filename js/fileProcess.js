@@ -1,6 +1,6 @@
 /*
 
-A beolvasott fájlból egy 2D Array-t készül "lottoStatics" néven.
+A beolvasott fájlból egy 2D Array-t készül "lottoStatics" néven az array objectben.
 Az első számmal a sorok közül lehet választani. (rögzített rekordok)
 A második számmal az oszlopok közül lehet választani. (a rögzített rekord egy-egy tulajdonsága)
 
@@ -24,24 +24,24 @@ Az oszlopok számozása
 16  Nyerőszám #5
 */
 
+let array = {
+    lottoStatics: new Array,
+    temp: new Array
+}
 
-
-lottoStatics = []
-
-function readFile() {
-    tempArray = []
-    $.ajax({
+function lottoStatics() {
+     $.ajax({      
         url: './resources/data/otos.csv',
+        async: false,
         success: function (response) {
-            tempArray = response.split("\r\n")
-            for (i = 0; i < tempArray.length; i++) {
-                if (tempArray[i]) {
-                    lottoStatics.push(tempArray[i].split(";"))
+            array.temp = response.split("\r\n")
+            for (let i = 0; i < array.temp.length; i++) {
+                if (array.temp[i]) {
+                    array.lottoStatics.push(array.temp[i].split(";"))
                 }
             }
-            console.log(lottoStatics[1][1])
         },
     });
 }
 
-readFile();
+export { lottoStatics, array }
