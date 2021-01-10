@@ -24,24 +24,27 @@ Az oszlopok számozása
 16  Nyerőszám #5
 */
 
+
+//Objektum létrehozása két üres Array-el
 let array = {
     lottoStatics: new Array,
     temp: new Array
 }
 
+//Fájlbeolvasás és feldolgozás
 function lottoStatics() {
      $.ajax({      
-        url: './resources/data/otos.csv',
-        async: false,
+        url: './resources/data/otos.csv',       //A fájl helye
+        async: false,                           //Aszinkron mód kikapcsolva
         success: function (response) {
-            array.temp = response.split("\r\n")
+            array.temp = response.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
             for (let i = 0; i < array.temp.length; i++) {
                 if (array.temp[i]) {
-                    array.lottoStatics.push(array.temp[i].split(";"))
+                    array.lottoStatics.push(array.temp[i].split(";"))       //2D Array létrehozása
                 }
             }
         },
     });
 }
 
-export { lottoStatics, array }
+export { lottoStatics, array }          //lottoStatics funkctió és array objektum exportálása
