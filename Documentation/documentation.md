@@ -1,7 +1,10 @@
 Major Ádám
 
+
+
 Telepített library-k:
 -jQuery     2021.01.09
+
 
 
                                 --fileProcess.js--  2021.01.09
@@ -24,7 +27,8 @@ Azért használok objektumot, mert így az array-ok könnyen exportálhatóak m�
 
 A beolvasott otos.csv fájlból egy 2D Array-t hozok létre. Ez úgy történik hogy:
     1. A beolvasott tartalmat az temp Array-ba mentem, mindezt úgy, hogy minden egyes sorból külön Array-t hozok létre.     (37. sor)
-    2. Egy for loop-al végigmegyek a temp Array összes elemén, majd a pontos vesszők mentén szintén külön Array-t hozok létre. Minden egyes létrehozás után a lottoStatics Array-ba töltöm fel az eredményt   (38. sor)
+    2. Egy for loop-al végigmegyek a temp Array összes elemén, majd a pontos vesszők mentén szintén külön Array-t hozok létre. 
+    Minden egyes iterációban a lottoStatics Array-ba töltöm fel az eredményt   (38. sor)
 
 Ellenőrzésre kerül, hogy a beolvasott sor valóban tartalmaz-e adatot, nehogy üres sor kerüljön beolvasásra  (39. sor)
 
@@ -46,4 +50,51 @@ Az otos.csv fálj tartalmát úgy lehet felhasználni hogy:
     9:Hármas találatok nyeremény ; 10:Kettes találatok száma ; 11:Kettes találatok nyeremény;
     12:Nyerőszám #1 ; 13:Nyerőszám #2 ; 14:Nyerőszám #3 ; 15:Nyerőszám #4 ; 16:Nyerőszám #5
 
-    pl.: array.lottoStatics[50][12] (Ez az 51. rekord "Nyerőszám #1" oszlopa)
+    pl.: array.lottoStatics[50][12] (Ez az 51. rekord "Nyerőszám #2" oszlopa) (indexelés 0-ról indul!)
+
+
+
+                                --index.js-- 2021.01.09.
+
+A fájl célja, hogy megtalálja a két legutóbbi lottószám húzást.
+    1. Importálom az array objektumot és a lottoStatics funkciót a fileProcess.js-ből. (1. sor)
+    2. Meghívom a lottoStatics funkciót. A fájl beolvasásra kerül. (7. sor)
+    3. Definiálok két üres Array-t. Ezekbe lesznek mentve a számsorozatok. (10. sor)
+    4. Egy for ciklussal végigmegyek a lottoStatics 2D Array 11-16. oszlopán.
+    (ezek tartalmazzák az 5 darab számot)   (15.sor)
+    5. Az első és második sor 11-16. oszlopával feltöltöm a recentNumber és lastWeekNumber Array-eket. (15-16. sor)
+    6. A HTML-ben a megfelelő id-vel ellátott list itemek HTML értékeit megváltoztatom az Array-ek megfelelő elemeire.
+
+
+
+                                --index.html-- 2021.01.09.
+
+A HTML oldalt összekapcsoltam az index.js és jquery.js fájlal, valamint hozzáadtam a megfelelő HTML elemekhez id-ket, amit selectorként tudok használni az eredmények kiírásához.
+
+
+
+                            --leggyak_szamok.js-- 2021.01.09.
+
+A fájl célja, hogy megtalálja a három leggyakrabban húzott számot.
+    1. Importálom az array objektumot és a lottoStatics funkciót a fileProcess.js-ből. (1. sor)
+    2. Meghívom a lottoStatics funkciót. A fájl beolvasásra kerül. (7. sor)
+    3. Létrehozok egy szám nevű üres objektumot. (10. sor)
+    4. Egy for loop-al az objektumba propetries-eket generálok 1-től 90-ig, amiknek az értékei mind 0.
+    (az ötös lottóban 1-től 90-ig vannak számok)
+    5. Egy dupla for loppal végigmegyek az objektum összes propeties-én. A properties-ek neveit összehasonlítja a húzott számokkal. Ahol egyezést talál, ott a properties értékét megnöveli 1-el.
+
+                                    --2021.01.10.--
+
+    6. Loopokkal megtaláljuk azt, hogy melyik a legmagasabb érték hogy melyik properties tartozik hozzá.
+    A második és harmadik legnagyobb számnál csak annyi a különbség, hogy az if statementben nem engedem,
+    hogy az előzőnél nagyobb értéket hozzáadjon.
+    Majd a num objektumba elmentem az értkékeket.    (33-58. sor)
+    7. Feltöltöm a HTML elemek értékeit.
+
+
+
+                            --leggyak_szamok.html-- 2021.01.10--
+
+    A HTML oldalt összekapcsoltam a leggyak_szamok.js és jquery.js fájlal, valamint hozzáadtam a megfelelő HTML elemekhez id-ket, amit selectorként tudok használni az eredmények kiírásához.
+
+    -----------------------------------------------------------------------------------------------
