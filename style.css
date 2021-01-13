@@ -42,13 +42,15 @@ main ul{
 }
 main ul li:first-child{
     margin-left: 600px;
+    
 }
+
 main ul li{
     list-style: none;
     float: left;
     padding: 10px;
-    
 }
+
 table , th , td {
     display: inline-block;
     margin: 10px;
