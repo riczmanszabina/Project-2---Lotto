@@ -25,26 +25,29 @@ Az oszlopok számozása
 */
 
 
-//Objektum létrehozása két üres Array-el
-let array = {
-    lottoStatics: new Array,
-    temp: new Array
+//Objektum létrehozása egy üres array-el.
+let data = {
+    lottoStatics: new Array(),
+    isReaded: false
 }
 
 //Fájlbeolvasás és feldolgozás
-function lottoStatics() {
+function readLottoStatics() {
      $.ajax({      
         url: './resources/data/otos.csv',       //A fájl helye
         async: false,                           //Aszinkron mód kikapcsolva
         success: function (response) {
-            array.temp = response.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
-            for (let i = 0; i < array.temp.length; i++) {
-                if (array.temp[i]) {
-                    array.lottoStatics.push(array.temp[i].split(";"))       //2D Array létrehozása
+            let tempArrayOne = new Array()
+            tempArrayOne = response.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
+            for (let i = 0; i < tempArrayOne.length; i++) {
+                if (tempArrayOne[i]) {
+                    data.lottoStatics.push(tempArrayOne[i].split(";"))       //2D Array létrehozása
                 }
             }
+            data.isReaded = true
         },
     });
 }
 
-export { lottoStatics, array }          //lottoStatics funkctió és array objektum exportálása
+//lottoStatics funkció és array objektum exportálása
+export { readLottoStatics, data }
