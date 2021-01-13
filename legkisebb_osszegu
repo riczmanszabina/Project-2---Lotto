@@ -28,22 +28,26 @@
 </div>
     <main>
         <div id="tartalom">
-            <h1>Leghasonlóbb számsorok</h1>
-            <h2>1989-02-24</h2>
+            <h1>A 3 Legkisebb összegű számsorok</h1>
+            <h2>Összeg: 15</h2>
+            <div id="golyo">
+                <img src="piros golyo.png" alt="Piros golyo" title="Piros golyo">
+            </div>
+            <h2>Összeg: 16</h2>
             <ul>
-                <li>8</li>
-                <li>18</li>
-                <li>28</li>
-                <li>38</li>
-                <li>58</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>6</li>
             </ul>
-            <h2>1987-10-08</h2>
+            <h2>Összeg: 17</h2>
             <ul>
-                <li>8</li>
-                <li>18</li>
-                <li>28</li>
-                <li>38</li>
-                <li>58</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>7</li>
             </ul>
         </div>
     </main>
