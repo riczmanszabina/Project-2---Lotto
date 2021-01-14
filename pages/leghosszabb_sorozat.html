@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Lotto</title>
 </head>
 <body>
@@ -15,11 +15,11 @@
     <nav>
         <div id="lista">
             <ul>
-                <a href="index.html"><li>Korábbi sorsolások</li></a>
-                <a href="./pages/leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
-                <a href="./pages/leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
-                <a href="./pages/leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
-                <a href="./pages/legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
+                <a href="../index.html"><li>Korábbi sorsolások</li></a>
+                <a href="./leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
+                <a href="./leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
+                <a href="./leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
+                <a href="./legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
                 <a href=""><li>Grafikonok</li></a>
                 <a href=""><li>Érdekes történetek</li></a>
             </ul>
@@ -29,34 +29,34 @@
     <main>
         <div id="tartalom">
             <h1>A 3 Leghosszabb sorozatot tartalmazó számsor</h1>
-            <h2>4 egymást követő szám</h2>
+            <h2><p id="result-first-followingnumbers">4</p> egymást követő szám</h2>
             <ul>
-                <li>8</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
+                <li id="result-first-one">8</li>
+                <li id="result-first-two">18</li>
+                <li id="result-first-three">19</li>
+                <li id="result-first-four">20</li>
+                <li id="result-first-five">21</li>
             </ul>
-            <h2>3 egymást követő szám</h2>
+            <h2><p id="result-second-followingnumbers">3</p> egymást követő szám</h2>
             <ul>
-                <li>15</li>
-                <li>56</li>
-                <li>66</li>
-                <li>67</li>
-                <li>68</li>
+                <li id="result-second-one">15</li>
+                <li id="result-second-two">56</li>
+                <li id="result-second-three">66</li>
+                <li id="result-second-four">67</li>
+                <li id="result-second-five">68</li>
             </ul>
-            <h2>3 egymást követő szám</h2>
+            <h2><p id="result-third-folowingnumbers">3</p> egymást követő szám</h2>
             <ul>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>38</li>
-                <li>58</li>
+                <li id="result-third-one">4</li>
+                <li id="result-third-two">5</li>
+                <li id="result-third-three">6</li>
+                <li id="result-third-four">38</li>
+                <li id="result-third-five">58</li>
             </ul>
         </div>
     </main>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/index.js" type="module"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/leghosszabbSorozat.js" type="module"></script>
 </body>
 </html>
