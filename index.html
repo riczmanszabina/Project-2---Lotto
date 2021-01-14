@@ -3,50 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Lottó</title>
 </head>
 <body>
-<div id="menuhasab">
-    <div id="hatterkep">
-        <img src="img/hatter_szerkesztett.jpg" alt="Golyós háttér" title="Lottó Golyós">
-    </div>
-    
-    <nav>
-        <div id="lista">
-            <ul>
-                <a href="index.html"><li>Korábbi sorsolások</li></a>
-                <a href="./pages/leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
-                <a href="./pages/leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
-                <a href="./pages/leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
-                <a href="./pages/legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
-                <a href=""><li>Grafikonok</li></a>
-                <a href=""><li>Érdekes történetek</li></a>
-            </ul>
-        </div>
-    </nav>
-</div>
-    <main>
-        <div id="tartalom">
-            <h1>Korábbi sorsolások</h1>
-            <h2>Az előző heti nyerőszámok</h2>
-            <ul>
-                <li id="recent-one"></li>
-                <li id="recent-two"></li>
-                <li id="recent-three"></li>
-                <li id="recent-four"></li>
-                <li id="recent-five"></li>
-            </ul>
-            <h2>A mult heti nyerőszámok</h2>
-            <ul>
-                <li id="last-one"></li>
-                <li id="last-two"></li>
-                <li id="last-three"></li>
-                <li id="last-four"></li>
-                <li id="last-five"></li>
-            </ul>
-        </div>
-    </main>
+
+<table>
+    <tr>
+        <td class="table-aside">
+            <aside>
+                <div class="aside-background-container"><img src="./img/hatter_szerkesztett.jpg" alt=""></div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#"></a>Korábbi sorsolások</li>
+                        <hr>
+                        <li><a href="#"></a>Leggyakoribb számok</li>
+                        <hr>
+                        <li><a href="#"></a>Leghasonlóbb számok</li>
+                        <hr>
+                        <li><a href="#"></a>Leghosszabb sorozatok a számsorokban</li>
+                        <hr>
+                        <li><a href="#"></a>Legkisebb összegű számok</li>
+                        <hr>
+                        <li><a href="#"></a>Grafikonok</li>
+                        <hr>
+                        <li><a href="#"></a>Érdekes történetek</li>
+                    </ul>
+                </nav>
+                
+            </aside>
+        </td>
+        <td class="table-main">
+            <main>
+                <h1>Korábbi sorsolások</h1>
+
+                <h2>Az előző heti nyerőszámok</h2>
+
+                <div class="result-display">
+                    <div class="one"><p id="recent-one"></p></div>
+                    <div class="two"><p id="recent-two"></p></div>
+                    <div class="three"><p id="recent-three"></p></div>
+                    <div class="four"><p id="recent-four"></p></div>
+                    <div class="five"><p id="recent-five"></p></div>
+                </div>
+
+                <h2>A múlt heti nyerőszámok</h2>
+
+                <div class="result-display">
+                    <div class="one"><p id="last-one"></p></div>
+                    <div class="two"><p id="last-two"></p></div>
+                    <div class="three"><p id="last-three"></p></div>
+                    <div class="four"><p id="last-four"></p></div>
+                    <div class="five"><p id="last-five"></p></div>
+                </div>
+            </main>
+        </td>
+    </tr>
+</table>
 
     <script src="js/jquery.js"></script>
     <script src="js/index.js" type="module"></script>
