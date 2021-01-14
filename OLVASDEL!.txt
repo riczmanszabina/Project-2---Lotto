@@ -1,0 +1,32 @@
+
+Az index.html-t megcsináltam nagyjából úgy, ahogyan a Tanár úr által adott mintában szerepel.
+Ezt szerintem fel tudjátok használni mintának a többi oldalhoz. (elég hasonlóak)
+
+
+Amire figyeljetek:
+
+1.------------------------------
+A html fájlokban mindig relatív elérési útvonalat adjatok meg.
+Pl.:    Az index.html fájlból a leggyak_szamok.html fájlra mutató link ("./pages/leggyak_szamok.html")
+        leggyak_szamok.html-ből az index.html-re mutató ("../index.html")
+        leggyak_szamok.html-ből a leghasonlobb_szsor.html-re mutató ("./leghasonlobb_szsor.html")
+--------------------------------
+
+
+
+2.------------------------------
+A html fájlokhoz kapcsolt javascriptek már működőképesek. A javascript fájlból id-k alapján választom ki a html elemeket,
+amikbe az eredményket beleírom. Az id-ket hozzá lehet rendelni akár <li>, akár <p> tag-hez, de ne módosítsátok az id-k neveit,
+mert akkor nem fogja kiírni az eredményt.
+
+Az, hogy ha megnyitod a .html fájl-t és nem ír ki eredményt oda ahova kellene, esetleg "...betöltést" ír ne tévesszen meg. 
+Webhelyre feltöltve (vagy live serveren megnyitva) tökéletesen működnek.
+--------------------------------
+
+
+
+3.------------------------------
+A css könyvtárban csináltam két css fájlt.
+A style.css-be olyan elemek stílusát módosítottam, amik minden oldalon általánosan jelen vannak (navigációs menü, golyók, stb.)
+Az index.css-be pedig specifikusan olyan dolgokat, amik az index.html-re vonatkozik.
+--------------------------------
