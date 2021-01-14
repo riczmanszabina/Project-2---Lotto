@@ -10,7 +10,7 @@ if (!data.isReaded) {
 }
 
 //Üres array készítése 2D arraynak a számsorokhoz.
-let pulledNums = []
+let pulledNums = new Array()
 
 //2D Array készítése a húzott számokból.
 for (let i = 0; i < data.lottoStatics.length; i++) {
@@ -25,7 +25,7 @@ let tempFirstNumSeries;
 let tempSecondNumSeries;
 
 //Üres array létrehozása objektumoknak
-let similarNumbersArray = []
+let similarNumbersArray = new Array()
 
 //Array feltöltése objektumokkal
 for (let i = 0; i < pulledNums.length; i++) {

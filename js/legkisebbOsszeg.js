@@ -1,20 +1,12 @@
 import { data } from './fileProcess.js'
 import { readLottoStatics } from './fileProcess.js'
+import { LegkisebbOsszeg } from './class/LegkisebbOsszeg.js'
 
 //A három legkisebb összegű számsorok
 
 //otos.csv fájl beolvasása.
 if (!data.isReaded) {
     readLottoStatics()
-}
-
-//Elkészítek egy classt. Ennek az objektumaiba mentem majd az eredményt.
-class Lowest {
-    constructor(sumResult, indexNum, lottoNumber) {
-        this.sumResult = sumResult;
-        this.indexNum = indexNum;
-        this.lottoNumber = lottoNumber;
-    }
 }
 
 //Létrehozok egy üres objektumot.
@@ -30,9 +22,9 @@ for (let i = 0; i < data.lottoStatics.length; i++) {
 }
 
 //Létrehozok három objektumot, amikben eltárolom az eredményeket.
-let firstLowest = new Lowest(lottoNumSums[0], 0, []);
-let secondLowest = new Lowest(lottoNumSums[0], 0, []);
-let thirdLowest = new Lowest(lottoNumSums[0], 0, []);
+let firstLowest = new LegkisebbOsszeg(lottoNumSums[0], 0, []);
+let secondLowest = new LegkisebbOsszeg(lottoNumSums[0], 0, []);
+let thirdLowest = new LegkisebbOsszeg(lottoNumSums[0], 0, []);
 
 //Első legkisebb összeg.
 for (let prop in lottoNumSums) {
