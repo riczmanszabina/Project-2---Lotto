@@ -92,5 +92,25 @@ for (let i = 0; i < pulledNums.length; i++) {
     }
 }
 
+$("#result-first-followingnumbers").html(result[0].followingNumbers)
+$("#result-first-one").html(result[0].numSeries[0])
+$("#result-first-two").html(result[0].numSeries[1])
+$("#result-first-three").html(result[0].numSeries[2])
+$("#result-first-four").html(result[0].numSeries[3])
+$("#result-first-five").html(result[0].numSeries[4])
+
+$("#result-second-followingnumbers").html(result[1].followingNumbers)
+$("#result-second-one").html(result[1].numSeries[0])
+$("#result-second-two").html(result[1].numSeries[1])
+$("#result-second-three").html(result[1].numSeries[2])
+$("#result-second-four").html(result[1].numSeries[3])
+$("#result-second-five").html(result[1].numSeries[4])
+
+$("#result-third-followingnumbers").html(result[2].followingNumbers)
+$("#result-third-one").html(result[2].numSeries[0])
+$("#result-third-two").html(result[2].numSeries[1])
+$("#result-third-three").html(result[2].numSeries[2])
+$("#result-third-four").html(result[2].numSeries[3])
+$("#result-third-five").html(result[2].numSeries[4])
 
 console.log(result)
