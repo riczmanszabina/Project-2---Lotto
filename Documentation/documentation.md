@@ -127,6 +127,11 @@ A HTML oldalt összekapcsoltam a leggyak_szamok.js és jquery.js fájlal, valami
 
                             --legkisebb_osszeg.js 2021.01.12--
 
+    A fájlhoz a LegkisebbOsszeg osztályt használom.
+        sumResult: A húzott számok összeadásának eredménye
+        indexNum: A húzott számok haynadik sorban találhatóak a beolvasott fájlban
+        lottoNumber: Array, a húzott számokat tartalmazza.
+
 A fájl célja, hogy megtalálja a három legkisebb összegű számhúzásokat, illetve a hozzá tartozó 5 darab számot.
     1. Készítettem egy osztályt és egy hozzá tartozó konstruktort. Az osztályból példányosított objektumokban
     lesznek tárolva az eredmények.
@@ -153,7 +158,71 @@ A fájl célja, hogy megtalálja a három legkisebb összegű számhúzásokat, 
         Az első tulajdonság a húzott számok össuege, a második a rekord sorszáma, a harmadik egy a húzott
         számok tárolására szolgáló array.
 
-    
+
+
+
+                            --leghasonlobbSzamok.js 2021.01.13--
+
+    A fájlhoz a LeghasonlobbSzamok osztályt használom.
+        firstNumSeries: Array, egy számsorozatot tartalmaz
+        secondNumSeries: Array, egy számsorozatot tartalmaz
+        firstNumSeriesLine:  Az első számsorozat hanyadik sorban található a fájlban
+        secondNumSeriesLine: A második számsorozat hanyadik sorban található a fájlban
+        firstNumSeriesDate: Az első számsorozathoz tartozó dátum
+        secondNumSeriesDate: A második számsorozathoz tartozó dátum
+        matchingNumbers: Az első és második számsorozat között hány megegyező szám található.
+
+    A fájl célja, hogy megtalálja a leghasonlóbb számsorokat és a húzás dátumát.
+
+    1. Készítek egy üres array-t.(13. sor)
+    2. Az üres Array-ből 2D Arrayt- készítek az összes húzott számsorral. (15.sor)
+    3. Deklarálok két segédváltozót (24-25. sor)
+    4. Készítek egy ürres Array-t objeckteknek. (28. sor)
+    5. Egy for looppal összehasonlítom az összes számsort egymással. Ahol egyezést talál, abból
+    egy objectet készít, majd az objectet elmenti az array-be. (31.sor)
+    6. Az objektumokon belül megállapítom a hasonlóságok számát. (47. sor)
+    7. Készítek egy "üres" objetumot. (59. sor)
+    8. Az objektum tulajdonságait feltöltöm az eredménnyel. (62. sor)
+    9. Megkeresem az eredményként eltárolt objectben a két húzáshoz tartozó dátumot
+        Amenniyben nincs dátum, úgy a húzás évét és hetét írja ki.
+
+
+
+    pulledNums:     2D Array, feltöltve a lottóhúzásokkal.
+
+    tempFirstNumSeries/tempSecondNumSeries:     Ideiglenes segédváltozók. Az összehasonlításhoz kell.
+
+    similarNumbersArray:       Array ojektumokkal feltölve. Az összes egyezőségről készül objektum. (kb 3 millió)
+
+    result:     Az eredményként kiválaszott objektum.
+
+
+
+
+                            --Leghosszabsorozat.js 2021.01.13--
+
+    A fájlhoz a LeghosszabbSorozat osztályt használom.
+        numSeries:  Array, a húzott számokat tartalmazza
+        followingNumbers:   Int, az egymást követő számokat mutatja meg.
+        id:                 Egyedi azonosítószám.
+                            
+
+    A fájl célja, hogy megtalálja a három leghoszabb egymást követő számot tartalmazó sorozatot.
+
+    1. Készítek egy üres Array-t (15. sor)
+    2. Az array-t feltöltöm a húzásokat tartalmazó objectekkel. (minden húzásnak 1 object)
+        Az object ezen kívül tartalmaz egy minden objecthez rendelt id-t, illetve hogy hány darab egymást követő
+        szám található (18. sor)
+    3. Az egymás követő számok megtalálása. Ezt úgy érem el, hogy az ellső loopban egyszerre 5, a másodikban 4, a harmadikban 3, a másodikban 2 számot jelölök ki. A kijelölések közt megállapítom, hogy van e növekményes sorrend vagy sem, majd a kijelölések egyel odébb lépnek. (26. sor)
+    4. Létrehozok egy üres array-t. Az üres array-t feltöltöm 3 üres objektummal. (65-68. sor)
+    5. Az array-ban lévő objektumok tulajdonságait feltöltöm az eredménynek megfelelően.
+        Az id alapján kerülöm el, hogy ne legyen kiválasztva ugyanolyan objektumok.
+
+
+
+    pullednums:     Array. Objektumokkal van feltöltve.
+
+    result:         Array. Három objektummal van feltöltve amelyek az eredméynt tartalmazzák.
 
 
     -----------------------------------------------------------------------------------------------
