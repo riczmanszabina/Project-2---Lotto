@@ -32,64 +32,9 @@ let data = {
 }
 
 //Fájlbeolvasás és feldolgozás
-
-/* function readLottoStatics() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let tempArrayOne = new Array()
-            tempArrayOne = xhttp.responseText.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
-            for (let i = 0; i < tempArrayOne.length; i++) {
-                if (tempArrayOne[i]) {
-                    data.lottoStatics.push(tempArrayOne[i].split(";"))       //2D Array létrehozása
-                }
-            }
-            data.isReaded = true
-        }
-    };
-    xhttp.open("GET", "http:/resources/data/otos.csv", false);
-    xhttp.send();
-} */
-
-/* function readLottoStatics() {
-    fetch('./resources/data/otos.csv')
-    .then(function(response) {
-        let tempArrayOne = new Array()
-        tempArrayOne = response.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
-        for (let i = 0; i < tempArrayOne.length; i++) {
-            if (tempArrayOne[i]) {
-                data.lottoStatics.push(tempArrayOne[i].split(";"))       //2D Array létrehozása
-            }
-        }
-        data.isReaded = true
-    })
-} */
-
-/* function readLottoStatics() {
-    fetch('./resources/data/otos.csv')
-    .then(function(response) {
-        return response.text();
-    })
-    .then(function(data) {
-        console.log(data)
-        let tempArrayOne = new Array()
-        tempArrayOne = data.split("\r\n")     //Beolvasott adat ideiglenes array-ba helyezése
-        for (let i = 0; i < tempArrayOne.length; i++) {
-            if (tempArrayOne[i]) {
-                data.lottoStatics.push(tempArrayOne[i].split(";"))       //2D Array létrehozása
-            }
-        }
-        data.isReaded = true
-    })
-    
-} */
-
-
-
-
 function readLottoStatics() {
      $.ajax({      
-        url: './resources/data/otos.csv',       //A fájl helye
+        url: '../resources/data/otos.csv',       //A fájl helye
         async: false,
                                   //Aszinkron mód kikapcsolva
         success: function (response) {
