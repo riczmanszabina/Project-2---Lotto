@@ -53,17 +53,34 @@ Az otos.csv fálj tartalmát úgy lehet felhasználni hogy:
     pl.: array.lottoStatics[50][12] (Ez az 51. rekord "Nyerőszám #2" oszlopa) (indexelés 0-ról indul!)
 
 
+    data:   Objektum két tulajdonsággal. A lottoStatics egy Array, amibe a beolvasott adat kerül mentésre
+            2D Array formában. az isReaded egy Boolean. Ha az adat beolvasásra kerül, értéke true-ra változik.
+
+    readLottoStatics():     Funkció. Feladata egy Ajax request formában a file beolvasása, illetve
+                            a 2D array létrehozása a beolvasott adatból.
+
+    url:    Beolvasni kívánt fájl helye
+
+    async:  Aszinkron mód kikapcsolva
+
+    tempArrayOne:   Ideiglenes segédarray. A 2D array létrehozásához kell.
+
+
 
                                 --index.js-- 2021.01.09.
 
 A fájl célja, hogy megtalálja a két legutóbbi lottószám húzást.
-    1. Importálom az array objektumot és a lottoStatics funkciót a fileProcess.js-ből. (1. sor)
-    2. Meghívom a lottoStatics funkciót. A fájl beolvasásra kerül. (7. sor)
-    3. Definiálok két üres Array-t. Ezekbe lesznek mentve a számsorozatok. (10. sor)
+    1. Importálom a data objektumot és a readLottoStatics funkciót a fileProcess.js-ből. (1. sor)
+    2. Meghívom a lottoStatics funkciót, ha a fájl még nem került beolvasásra. (7. sor)
+    3. Definiálok egy objektumot két üres Array-el. Ezekbe lesznek mentve a számsorozatok. (10. sor)
     4. Egy for ciklussal végigmegyek a lottoStatics 2D Array 11-16. oszlopán.
     (ezek tartalmazzák az 5 darab számot)   (15.sor)
     5. Az első és második sor 11-16. oszlopával feltöltöm a recentNumber és lastWeekNumber Array-eket. (15-16. sor)
     6. A HTML-ben a megfelelő id-vel ellátott list itemek HTML értékeit megváltoztatom az Array-ek megfelelő elemeire.
+
+
+
+    result: Objektum. Két Array-t tartalmaz, ezekbe az eredmények lesznek feltöltve.
 
 
 
@@ -73,28 +90,70 @@ A HTML oldalt összekapcsoltam az index.js és jquery.js fájlal, valamint hozz�
 
 
 
-                            --leggyak_szamok.js-- 2021.01.09.
+                            --leggyakoribbSzamok.js-- 2021.01.09.
 
 A fájl célja, hogy megtalálja a három leggyakrabban húzott számot.
-    1. Importálom az array objektumot és a lottoStatics funkciót a fileProcess.js-ből. (1. sor)
-    2. Meghívom a lottoStatics funkciót. A fájl beolvasásra kerül. (7. sor)
-    3. Létrehozok egy szám nevű üres objektumot. (10. sor)
+    1. Importálom a data objektumot és a readLottoStatics funkciót a fileProcess.js-ből. (1. sor)
+    2. Meghívom a lottoStatics funkciót, ha a fájl még nem került beolvasásra. (7. sor)
+    3. Létrehozok egy pulledNums nevű üres objektumot. (10. sor)
     4. Egy for loop-al az objektumba propetries-eket generálok 1-től 90-ig, amiknek az értékei mind 0.
     (az ötös lottóban 1-től 90-ig vannak számok)
     5. Egy dupla for loppal végigmegyek az objektum összes propeties-én. A properties-ek neveit összehasonlítja a húzott számokkal. Ahol egyezést talál, ott a properties értékét megnöveli 1-el.
 
                                     --2021.01.10.--
 
-    6. Loopokkal megtaláljuk azt, hogy melyik a legmagasabb érték hogy melyik properties tartozik hozzá.
+    6. Létrehozok egy result objektumot. Ebbe mentem majd az eredményt.
+    7. Loopokkal megtaláljuk azt, melyik a legmagasabb érték hogy melyik properties tartozik hozzá.
     A második és harmadik legnagyobb számnál csak annyi a különbség, hogy az if statementben nem engedem,
     hogy az előzőnél nagyobb értéket hozzáadjon.
     Majd a num objektumba elmentem az értkékeket.    (33-58. sor)
-    7. Feltöltöm a HTML elemek értékeit.
+    8. Feltöltöm a HTML elemek értékeit.
 
 
 
-                            --leggyak_szamok.html-- 2021.01.10--
+    pulledNums:     Objektum. 1-90-ig generálásra kerülnek benne tulajdonságok, (egy egy tulajdonság
+                    neve egy-egy lottószámnak felel meg) majd egy for looppal növelem a tulajdonságok
+                    értékeit a talált lottószámok függvényében
 
-    A HTML oldalt összekapcsoltam a leggyak_szamok.js és jquery.js fájlal, valamint hozzáadtam a megfelelő HTML elemekhez id-ket, amit selectorként tudok használni az eredmények kiírásához.
+    result:         Objektum, az eredmény kerül benne tárolásra.
+
+
+
+                            --leggyak_szamok.html 2021.01.10--
+
+A HTML oldalt összekapcsoltam a leggyak_szamok.js és jquery.js fájlal, valamint hozzáadtam a megfelelő HTML elemekhez id-ket, amit selectorként tudok használni az eredmények kiírásához.
+
+
+
+                            --legkisebb_osszeg.js 2021.01.12--
+
+A fájl célja, hogy megtalálja a három legkisebb összegű számhúzásokat, illetve a hozzá tartozó 5 darab számot.
+    1. Készítettem egy osztályt és egy hozzá tartozó konstruktort. Az osztályból példányosított objektumokban
+    lesznek tárolva az eredmények.
+    2. Létrehoztam egy üres lottoNumSums objektumot. Majd pedig ezt az objektumot feltöltöttem
+    az összes húzott lottószám összegével. Az objektum tulajdonsága egy sorszám, ami megfelel
+    az otos.csv fájlból készített 2D Array első számának. (sor)
+    3. Loopokkal megkeresem, hogy melyek a legkisebb számok a lottoNumSums objektumban.
+    Miután megvan, nem csak tulajdonság értékét mentem el az eredmény tárolására használt objektumban,
+    hanem magát a tulajdonságot is. (sorszám)
+    4. Egy for loppal az elmentett sorszám alapján megkeresem az 5 darab számot, majd az objektumba
+    egy Array-ba mentem őket.
+
+
+    lottoStatics(): fileProcessből importál funkció. Beolvassa az otos.csv fájlt.
+
+    class Lowest:   Osztály, amiből az eredmények tárolására szolgálo objektumok kerülnek példányosításra.
+
+    lottoNumSums:   Objektum, amiben tulajdonságként az adott rekord sorszáma, értékükként pedig a húzott
+                    számok összege tárolódik
+                    
+    tempNumber:     Ideiglenes segádváltozó.
+
+    firstLowest/secondLowest/thirdLowest:   Az első/második/harmadik eredményeit tároló objektumok.
+        Az első tulajdonság a húzott számok össuege, a második a rekord sorszáma, a harmadik egy a húzott
+        számok tárolására szolgáló array.
+
+    
+
 
     -----------------------------------------------------------------------------------------------
