@@ -37,21 +37,26 @@ body
     margin-top: -22px;
     
 }
-main ul{
+
+main ul
+{
     height: 50px;
 }
-main ul li:first-child{
-    margin-left: 600px;
-    
+
+main ul li:first-child
+{
+    margin-left: 600px;   
 }
 
-main ul li{
+main ul li
+{
     list-style: none;
     float: left;
     padding: 10px;
 }
 
-table , th , td {
+table , th , td
+{
     display: inline-block;
     margin: 10px;
 }
