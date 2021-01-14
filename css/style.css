@@ -26,7 +26,6 @@ aside {
 
 .table-aside li {
     font-size: 15px;
-    color: lightgray;
 }
 
 .aside-background-container img {
@@ -56,6 +55,13 @@ nav hr {
     width: 100%;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: lightgray;
+}
+
+
 hr {
     color: rgb(80, 80, 80);
 }
@@ -65,9 +71,6 @@ hr {
     bottom: 80px;
     left: 60px;
 }
-
-
-
 
 .one {
     background-image: url(../img/piros_golyo.png);
