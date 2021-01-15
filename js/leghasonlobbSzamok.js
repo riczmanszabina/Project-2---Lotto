@@ -6,7 +6,7 @@ import { LeghasonlobbSzamok } from './class/LeghasonlobbSzamok.js'
 
 //otos.csv fájl beolvasása.
 if (!data.isReaded) {
-    readLottoStatics()
+    readLottoStatics('../resources/data/otos.csv')
 }
 
 //Üres array készítése 2D arraynak a számsorokhoz.

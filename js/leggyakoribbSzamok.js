@@ -5,7 +5,7 @@ import { readLottoStatics } from './fileProcess.js'
 
 //otos.csv fájl beolvasása.
 if (!data.isReaded) {
-    readLottoStatics()
+    readLottoStatics('../resources/data/otos.csv')
 }
 
 //Egy üres objektum létrehozása.

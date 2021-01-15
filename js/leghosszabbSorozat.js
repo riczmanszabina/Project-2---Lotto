@@ -8,7 +8,7 @@ import { LeghosszabbSorozat } from './class/LeghosszabbSorozat.js'
 
 //otos.csv fájl beolvasása.
 if (!data.isReaded) {
-    readLottoStatics()
+    readLottoStatics('../resources/data/otos.csv')
 }
 
 //Üres Array létrehozása objecteknek.

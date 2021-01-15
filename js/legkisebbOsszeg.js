@@ -6,7 +6,7 @@ import { LegkisebbOsszeg } from './class/LegkisebbOsszeg.js'
 
 //otos.csv fájl beolvasása.
 if (!data.isReaded) {
-    readLottoStatics()
+    readLottoStatics('../resources/data/otos.csv')
 }
 
 //Létrehozok egy üres objektumot.

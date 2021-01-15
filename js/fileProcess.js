@@ -33,9 +33,9 @@ let data = {
 }
 
 //Fájlbeolvasás és feldolgozás
-function readLottoStatics() {
+function readLottoStatics(url) {
      $.ajax({      
-        url: '/resources/data/otos.csv',       //A fájl helye
+         url: url,       //A fájl helye
         async: false,
                                   //Aszinkron mód kikapcsolva
         success: function (response) {
