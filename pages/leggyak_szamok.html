@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/leggyak_szamok.css">
     <title>Lotto</title>
 </head>
 <body>
@@ -38,23 +39,10 @@
             <main>
                 <div id="tartalom">
                     <h1>Leggyakoribb számok</h1>
-                    <table>
-                        <tr>
-                            <th>#1</th>
-                            <td id="result-first-number">8</td>
-                            <td id="result-first-counter">12345db</td>
-                        </tr>
-                        <tr>
-                            <th>#2</th>
-                            <td id="result-second-number">88</td>
-                            <td id="result-second-counter">12345db</td>
-                        </tr>
-                        <tr>
-                            <th>#3</th>
-                            <td id="result-third-number">38</td>
-                            <td id="result-third-counter">12345db</td>
-                        </tr>
-                    </table>
+                    <p class="result-first-number"></p>
+                    <div class="result-container"><h1>#1</h1><div class="two"><p id="result-first-number" class="number"></p></div><p id="result-first-counter" class="counter"><p class="counter">db</p></p></div>
+                    <div class="result-container"><h1>#2</h1><div class="two"><p id="result-second-number" class="number"></p></div><p id="result-second-counter" class="counter"><p class="counter">db</p></p></div>
+                    <div class="result-container"><h1>#3</h1><div class="two"><p id="result-third-number" class="number"></p></div><p id="result-third-counter" class="counter"><p class="counter">db</p></p></div>
                 </div>
             </main>
         </td>
