@@ -112,5 +112,3 @@ $("#result-third-two").html(result[2].numSeries[1])
 $("#result-third-three").html(result[2].numSeries[2])
 $("#result-third-four").html(result[2].numSeries[3])
 $("#result-third-five").html(result[2].numSeries[4])
-
-console.log(result)
