@@ -3,58 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Lotto</title>
 </head>
 <body>
-<div id="menuhasab">
-    <div id="hatterkep">
-        <img src="../img/hatter_szerkesztett.jpg" alt="Golyos háttér" title="Lottó Golyos">
-    </div>
-    
-    <nav>
-        <div id="lista">
-            <ul>
-                <a href="../index.html"><li>Korábbi sorsolások</li></a>
-                <a href="./leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
-                <a href="./leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
-                <a href="./leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
-                <a href="./legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
-                <a href=""><li>Grafikonok</li></a>
-                <a href=""><li>Érdekes történetek</li></a>
-            </ul>
-        </div>
-    </nav>
-</div>
-    <main>
-        <div id="tartalom">
-            <h1>A 3 Leghosszabb sorozatot tartalmazó számsor</h1>
-            <h2><p id="result-first-followingnumbers">...betöltés</p> egymást követő szám</h2>
-            <ul>
-                <li id="result-first-one"></li>
-                <li id="result-first-two"></li>
-                <li id="result-first-three"></li>
-                <li id="result-first-four"></li>
-                <li id="result-first-five"></li>
-            </ul>
-            <h2><p id="result-second-followingnumbers">...betöltés</p> egymást követő szám</h2>
-            <ul>
-                <li id="result-second-one"></li>
-                <li id="result-second-two"></li>
-                <li id="result-second-three"></li>
-                <li id="result-second-four"></li>
-                <li id="result-second-five"></li>
-            </ul>
-            <h2><p id="result-third-followingnumbers">...betöltés</p> egymást követő szám</h2>
-            <ul>
-                <li id="result-third-one"></li>
-                <li id="result-third-two"></li>
-                <li id="result-third-three"></li>
-                <li id="result-third-four"></li>
-                <li id="result-third-five"></li>
-            </ul>
-        </div>
-    </main>
+<table>
+    <tr>
+        <td class="table-aside">
+            <aside>
+                <div class="aside-background-container"><img src="../img/hatter_szerkesztett.jpg" alt=""></div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Korábbi sorsolások</a></li>
+                        <hr>
+                        <li><a href="./leggyak_szamok.html">Leggyakoribb számok</a></li>
+                        <hr>
+                        <li><a href="./leghasonlobb_szsor.html">Leghasonlóbb számok</a></li>
+                        <hr>
+                        <li><a href="./leghosszabb_sorozat.html">Leghosszabb sorozatok a számsorokban</a></li>
+                        <hr>
+                        <li><a href="./legkisebb_osszegu.html">Legkisebb összegű számok</a></li>
+                        <hr>
+                        <li><a href="#"></a>Grafikonok</li>
+                        <hr>
+                        <li><a href="#"></a>Érdekes történetek</li>
+                    </ul>
+                </nav>
+
+            </aside>
+        </td>
+        <td class="table-main">
+            <main>
+                    <h1>A 3 Leghosszabb sorozatot tartalmazó számsor</h1>
+                    <h2>
+                        <p id="result-first-followingnumbers">...betöltés</p> egymást követő szám
+                    </h2>
+                    <ul>
+                        <li id="result-first-one"></li>
+                        <li id="result-first-two"></li>
+                        <li id="result-first-three"></li>
+                        <li id="result-first-four"></li>
+                        <li id="result-first-five"></li>
+                    </ul>
+                    <h2>
+                        <p id="result-second-followingnumbers">...betöltés</p> egymást követő szám
+                    </h2>
+                    <ul>
+                        <li id="result-second-one"></li>
+                        <li id="result-second-two"></li>
+                        <li id="result-second-three"></li>
+                        <li id="result-second-four"></li>
+                        <li id="result-second-five"></li>
+                    </ul>
+                    <h2>
+                        <p id="result-third-followingnumbers">...betöltés</p> egymást követő szám
+                    </h2>
+                    <ul>
+                        <li id="result-third-one"></li>
+                        <li id="result-third-two"></li>
+                        <li id="result-third-three"></li>
+                        <li id="result-third-four"></li>
+                        <li id="result-third-five"></li>
+                    </ul>
+            </main>
+        </td>
+    </tr>
+</table>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/leghosszabbSorozat.js" type="module"></script>
