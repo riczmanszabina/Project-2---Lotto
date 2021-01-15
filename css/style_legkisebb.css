@@ -106,7 +106,5 @@ hr {
 
 .result-display div {
     display: inline-block;
-    margin: 20px -3px;
-    height: 85px;
     width: 85px;
 }
