@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Lotto</title>
 </head>
 <body>
-<div id="menuhasab">
-    <div id="hatterkep">
-        <img src="../img/hatter_szerkesztett.jpg" alt="Golyós háttér" title="Lottó Golyós">
-    </div>
 
-    <nav>
-        <div id="lista">
-            <ul>
-                <a href="../index.html"><li>Korábbi sorsolások</li></a>
-                <a href="./leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
-                <a href="./leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
-                <a href="./leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
-                <a href="./legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
-                <a href=""><li>Grafikonok</li></a>
-                <a href=""><li>Érdekes történetek</li></a>
-            </ul>
-        </div>
-    </nav>
-</div>    
-    <main>
-        <div id="tartalom">
-            <h1>Leggyakoribb számok</h1>
-            <table>
-                <tr>
-                    <th>#1</th>
-                    <td id="result-first-number"></td>
-                    <td id="result-first-counter"></td>
-                </tr>
-                <tr>
-                    <th>#2</th>
-                    <td id="result-second-number"></td>
-                    <td id="result-second-counter"></td>
-                </tr>
-                <tr>
-                    <th>#3</th>
-                    <td id="result-third-number"></td>
-                    <td id="result-third-counter"></td>
-                </tr>
-            </table>
-        </div>
-    </main>
+<table>
+    <tr>
+        <td class="table-aside">
+            <aside>
+                <div class="aside-background-container"><img src="../img/hatter_szerkesztett.jpg" alt=""></div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Korábbi sorsolások</a></li>
+                        <hr>
+                        <li><a href="./leggyak_szamok.html">Leggyakoribb számok</a></li>
+                        <hr>
+                        <li><a href="./leghasonlobb_szsor.html">Leghasonlóbb számok</a></li>
+                        <hr>
+                        <li><a href="./leghosszabb_sorozat.html">Leghosszabb sorozatok a számsorokban</a></li>
+                        <hr>
+                        <li><a href="./legkisebb_osszegu.html">Legkisebb összegű számok</a></li>
+                        <hr>
+                        <li><a href="#"></a>Grafikonok</li>
+                        <hr>
+                        <li><a href="#"></a>Érdekes történetek</li>
+                    </ul>
+                </nav>
+
+            </aside>
+        </td>
+        <td class="table-main">
+            <main>
+                <div id="tartalom">
+                    <h1>Leggyakoribb számok</h1>
+                    <table>
+                        <tr>
+                            <th>#1</th>
+                            <td id="result-first-number"></td>
+                            <td id="result-first-counter"></td>
+                        </tr>
+                        <tr>
+                            <th>#2</th>
+                            <td id="result-second-number"></td>
+                            <td id="result-second-counter"></td>
+                        </tr>
+                        <tr>
+                            <th>#3</th>
+                            <td id="result-third-number"></td>
+                            <td id="result-third-counter"></td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+        </td>
+    </tr>
+</table>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/leggyakoribbSzamok.js" type="module"></script>
