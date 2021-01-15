@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 table {
@@ -14,6 +14,9 @@ table {
 
 .table-aside {
     width: 320px;
+    height: 500px;
+    vertical-align: top;
+    background-color: rgb(65, 65, 65);
 }
 
 table, tr, td {
@@ -22,6 +25,7 @@ table, tr, td {
 
 aside {
     width: 320px;
+    height: auto;
 }
 
 .table-aside li {
@@ -35,8 +39,7 @@ aside {
 }
 
 nav {
-    background-color: rgb(65, 65, 65);
-    padding: 1px 0px 300px 0px;
+    padding: 1px 0px 10px 0px;
     margin-top: -4px;
     color: white;
 }
@@ -66,11 +69,15 @@ hr {
     color: rgb(80, 80, 80);
 }
 
-.table-main main {
-    position: relative;
-    bottom: 80px;
-    left: 60px;
+.table-main {
+    vertical-align: top;
 }
+
+main {
+    margin: 80px 0px 0px 80px;
+}
+
+
 
 .one {
     background-image: url(../img/piros_golyo.png);

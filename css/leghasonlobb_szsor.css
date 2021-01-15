@@ -1,13 +1,20 @@
+h2 {
+    margin: 40px 0px;
+}
+
+.result-display {
+    margin-bottom: 60px;
+}
+
 .result-display p {
-    display: inline;
     font-weight: bold;
+    text-align: center;
     position: relative;
-    left: 34px;
-    top: 33px;
+    top: 18px;
 }
 
 .result-display div {
     display: inline-block;
-    margin: 20px -3px;
+    height: 85px;
     width: 85px;
 }
