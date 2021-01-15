@@ -9,7 +9,7 @@ if (!data.isReaded) {
     readLottoStatics('../resources/data/otos.csv')
 }
 
-//Létrehozok egy üres objektumot.
+//Üres objektum létrehozása.
 let lottoNumSums = {};
 
 //Az üres objektumot feltöltöm az összes lottószámhúzás összegeivel.
@@ -59,18 +59,6 @@ for (let i = 11; i < 16; i++) {
 
 
 //Kiíratás
-console.log(firstLowest.sumResult)
-console.log(firstLowest.indexNum)
-console.log(firstLowest.lottoNumber)
-
-console.log(secondLowest.sumResult)
-console.log(secondLowest.indexNum)
-console.log(secondLowest.lottoNumber)
-
-console.log(thirdLowest.sumResult)
-console.log(thirdLowest.indexNum)
-console.log(thirdLowest.lottoNumber)
-
 $("#result-first-sum").html(firstLowest.sumResult)
 $("#result-first-one").html(firstLowest.lottoNumber[0])
 $("#result-first-two").html(firstLowest.lottoNumber[1])

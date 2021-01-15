@@ -8,7 +8,7 @@ if (!data.isReaded) {
     readLottoStatics('./resources/data/otos.csv')
 }
 
-//Objektum létrehozása kér Array-el.
+//Objektum létrehozása.
 let result = {
     recent: new Array(),
     lastWeek: new Array()

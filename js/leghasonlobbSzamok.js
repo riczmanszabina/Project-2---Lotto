@@ -20,14 +20,14 @@ for (let i = 0; i < data.lottoStatics.length; i++) {
     }
 }
 
-//Ideiglenes segédváltozók deklarálása
+//Ideiglenes segédváltozók deklarálása.
 let tempFirstNumSeries;
 let tempSecondNumSeries;
 
-//Üres array létrehozása objektumoknak
+//Üres array létrehozása objektumoknak.
 let similarNumbersArray = new Array()
 
-//Array feltöltése objektumokkal
+//Array feltöltése objektumokkal.
 for (let i = 0; i < pulledNums.length; i++) {
      tempFirstNumSeries = pulledNums[i];
      for (let j = 0; j < pulledNums.length; j++) {
@@ -58,14 +58,14 @@ for (let i = 0; i < similarNumbersArray.length; i++) {
 //Objektum deklarálása az eredmény tárolására.
 let result = new LeghasonlobbSzamok([], [], 0, 0, '', '', 0);
 
-//Objektum feltöltése az eredménnyel
+//Objektum feltöltése az eredménnyel.
 for (let i = 0; i < similarNumbersArray.length; i++) {
     if (result.matchingNumbers < similarNumbersArray[i].matchingNumbers) {
         result = {...similarNumbersArray[i]}
     }
 }
 
-
+//Dátumok hozzárendelése az objecthez.
 if (data.lottoStatics[result.firstNumSeriesLine][2]) {
     result.firstNumSeriesDate = data.lottoStatics[result.firstNumSeriesLine][2]
     result.firstNumSeriesDate = result.firstNumSeriesDate.replaceAll(".", "-")
@@ -82,6 +82,7 @@ if (data.lottoStatics[result.secondNumSeriesLine][2]) {
     result.secondNumSeriesDate = "Pontos dátum nem található<br>" + data.lottoStatics[result.secondNumSeriesLine][0] + "." + data.lottoStatics[result.secondNumSeriesLine][1] + ".hét"
 }
 
+//HTML elemek értékeinek feltöltése.
 $("#result-first-date").html(result.firstNumSeriesDate);
 $("#result-first-one").html(result.firstNumSeries[0]);
 $("#result-first-two").html(result.firstNumSeries[1]);
