@@ -24,6 +24,7 @@ Az oszlopok számozása
 16  Nyerőszám #5
 */
 
+//asd
 
 //Objektum létrehozása egy üres array-el.
 let data = {
