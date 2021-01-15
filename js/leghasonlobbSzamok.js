@@ -82,11 +82,6 @@ if (data.lottoStatics[result.secondNumSeriesLine][2]) {
     result.secondNumSeriesDate = "Pontos dátum nem található<br>" + data.lottoStatics[result.secondNumSeriesLine][0] + "." + data.lottoStatics[result.secondNumSeriesLine][1] + ".hét"
 }
 
-console.log(result)
-
-
-
-
 $("#result-first-date").html(result.firstNumSeriesDate);
 $("#result-first-one").html(result.firstNumSeries[0]);
 $("#result-first-two").html(result.firstNumSeries[1]);
