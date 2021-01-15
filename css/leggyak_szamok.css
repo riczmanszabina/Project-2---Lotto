@@ -1,0 +1,32 @@
+
+
+.result-container h1, .result-container div, .result-container p {
+    display: inline-block;
+    margin: 0px 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.result-container h1 {
+    position: relative;
+    top: 17px;
+}
+
+.result-container div {
+    width: 90px;
+    height: 90px;
+}
+
+.result-container .number {
+    font-weight: bold;
+    position: relative;
+    top: 32px;
+    left: 25px;
+    font-size: 22px;
+}
+
+.result-container .counter {
+    font-size: 40px;
+    position: relative;
+    top: 14px;
+}
