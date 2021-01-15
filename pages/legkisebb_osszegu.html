@@ -3,32 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>Lotto</title>
+    <link rel="stylesheet" href="../css/style_legkisebb.css">
+    
+    <title>Lottó</title>
 </head>
 <body>
 <div id="menuhasab">
-    <div id="hatterkep">
-        <img src="../img/hatter_szerkesztett.jpg" alt="Golyos háttér" title="Lottó Golyos">
-    </div>
     
-    <nav>
-        <div id="lista">
-            <ul>
-                <a href="../index.html"><li>Korábbi sorsolások</li></a>
-                <a href="./leggyak_szamok.html"><li>Leggyakoribb számok</li></a>
-                <a href="./leghasonlobb_szsor.html"><li>Leghasonlóbb számsorok</li></a>
-                <a href="./leghosszabb_sorozat.html"><li>Leghosszabb sorozatok számsorokban</li></a>
-                <a href="./legkisebb_osszegu.html"><li>Legkisebb összegü számsorok</li></a>
-                <a href=""><li>Grafikonok</li></a>
-                <a href=""><li>Érdekes történetek</li></a>
-            </ul>
-        </div>
-    </nav>
-</div>
-    <main>
-        <div id="tartalom">
-            <h1>A 3 Legkisebb összegű számsorok</h1>
+    
+    <table>
+        <tr>
+            <td class="table-aside">
+                <aside>
+                    <div class="aside-background-container"><img src="../img/hatter_szerkesztett.jpg" alt=""></div>
+    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Korábbi sorsolások</a></li>
+                            <hr>
+                            <li><a href="./pages/leggyak_szamok.html">Leggyakoribb számok</a></li>
+                            <hr>
+                            <li><a href="./pages/leghasonlobb_szsor.html">Leghasonlóbb számok</a></li>
+                            <hr>
+                            <li><a href="./pages/leghosszabb_sorozat.html">Leghosszabb sorozatok a számsorokban</a></li>
+                            <hr>
+                            <li><a href="./pages/legkisebb_osszegu.html">Legkisebb összegű számok</a></li>
+                            <hr>
+                            <li><a href="#"></a>Grafikonok</li>
+                            <hr>
+                            <li><a href="#"></a>Érdekes történetek</li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+            </td>
+            <td class="table-main">
+                <main>
+                    <h1>A 3 Legkisebb összegű számsorok</h1>
+    
+                    <h2>Összeg: <p id="result-first-sum">...betöltés</p></h2>
+    
+                    <div class="result-display">
+                        <div class="one"><p id="result-first-one"></p></div>
+                        <div class="two"><p id="result-first-two"></p></div>
+                        <div class="three"><p id="result-first-three"></p></div>
+                        <div class="four"><p id="result-first-four"></p></div>
+                        <div class="five"><p id="result-first-five"></p></div>
+                    </div>
+    
+                    <h2>Összeg: <p id="result-second-sum">...betöltés</p></h2>
+    
+                    <div class="result-display">
+                        <div class="one"><p id="result-second-one"></p></div>
+                        <div class="two"><p id="result-second-two"></p></div>
+                        <div class="three"><p id="result-second-three"></p></div>
+                        <div class="four"><p id="result-second-four"></p></div>
+                        <div class="five"><p id="result-second-five"></p></div>
+                    </div>
+                    
+                    <h2>Összeg: <p id="result-third-sum">...betöltés</p></h2>
+                    
+                    <div class="result-display">
+                        <div class="one"><p id="result-third-one"></p></div>
+                        <div class="two"><p id="result-third-two"></p></div>
+                        <div class="three"><p id="result-third-three"></p></div>
+                        <div class="four"><p id="result-third-four"></p></div>
+                        <div class="five"><p id="result-third-five"></p></div>
+                    </div>
+
+                </main>
+            </td>
+        </tr>
+    </table>
+    
+        <script src="js/jquery.js"></script>
+        <script src="js/index.js" type="module"></script>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+<!-- <h1>A 3 Legkisebb összegű számsorok</h1>
             <h2>Összeg: <p id="result-first-sum">...betöltés</p></h2>
             <ul>
                 <li id="result-first-one"></li>
@@ -54,9 +115,4 @@
                 <li id="result-third-five"></li>
             </ul>
         </div>
-    </main>
-
-    <script src="../js/jquery.js"></script>
-    <script src="../js/legkisebbOsszeg.js" type="module"></script>
-</body>
-</html>
+    </main> -->
