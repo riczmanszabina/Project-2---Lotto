@@ -1,5 +1,5 @@
-import { data } from './fileProcess.js'
-import { readLottoStatics } from './fileProcess.js'
+import { data } from './components/fileProcess.js'
+import { readLottoStatics } from './components/fileProcess.js'
 
 //A három leggyakrabban húzott számok és hányszor lettek húzva.
 
