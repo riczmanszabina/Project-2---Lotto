@@ -2,8 +2,6 @@ import { data } from './components/fileProcess.js'
 import { readLottoStatics } from './components/fileProcess.js'
 import { LeghosszabbSorozat } from './class/LeghosszabbSorozat.js'
 
-
-
 //A leghoszabb számsorozatok
 
 //otos.csv fájl beolvasása.
