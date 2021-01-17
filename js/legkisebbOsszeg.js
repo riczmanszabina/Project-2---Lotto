@@ -17,8 +17,8 @@ for (let i = 0; i < data.lottoStatics.length; i++) {
     let tempNumber = 0
     for (let j = 11; j < 16; j++) {
         tempNumber += parseInt(data.lottoStatics[i][j])
-        lottoNumSums[i] = tempNumber
     }
+    lottoNumSums[i] = tempNumber
 }
 
 //Létrehozok három objektumot, amikben eltárolom az eredményeket.
