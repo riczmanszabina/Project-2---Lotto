@@ -1,10 +1,15 @@
 .szamok_grafikon{
     width: 100%;
 }
-aside{
-    position: fixed;
-}
 
 .next{
     float: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
 }
